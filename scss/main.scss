@@ -13,9 +13,10 @@
         max-width: 952px;
     }
     @media screen and (max-width: 820px) {
-        //max-width: 952px;
+        max-width: 600px;
     }
 }
+/*................header..................*/
 header{
     background-color: $primary-color;
     padding: 39px 0 89px;
@@ -82,6 +83,7 @@ header{
     }
 }
 
+/*...........................banner.........................*/
 
 .banner-main{
     background-color: $primary-color;
@@ -216,9 +218,130 @@ header{
                 width: 100%;
             }
             @media screen and (max-width: 820px) {
-                margin-top: 26px;
+                margin: 26px 0;
                 max-width: 600px;
             }
         }
     }
+    .brand-main{
+        background-color: rgba(255, 255, 255, 0.20);
+        margin-top: 175px;
+        @media screen and (max-width: 1280px) {
+            margin-top: 100px;
+        }
+        @media screen and (max-width: 820px) {
+            display: none;
+        }
+        .brand{
+            height: 84px;
+            @include d-flex(space-between, row);
+            align-items: center;
+            @media screen and (max-width: 1280px) {
+                height: 77px;
+            }
+            .brand__item{
+                height: 30px;
+                width: auto;
+                @media screen and (max-width: 1280px) {
+                    height: 25px;
+                }
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
+/*.........................main...........................*/
+main{
+ background-color: white;
+ .services{
+    &__heading{
+        margin: 120px 0 40px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 52px;
+        @media screen and (max-width: 1280px) {
+            font-size: 32px;
+            margin: 90px 0 32px;
+        }
+        @media screen and (max-width: 820px) {
+            font-size: 20px;
+            margin: 24px 0;
+            text-align: center;
+        }
+    }
+    &__container{
+        @include d-flex(space-between, row);
+        @media screen and (max-width: 820px) {
+            @include d-flex(center, column);
+            gap: 20px;
+        }
+        &--item{
+            flex-basis: 30%;
+            padding: 32px 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(29, 28, 49, 0.10);
+            @include d-flex(flex-end, column);
+            @media screen and (max-width: 1280px) {
+                padding: 24px 16px;
+                flex-basis: 32%;
+            }
+            @media screen and (max-width: 820px) {
+                max-width: 304px;
+                align-self: center;
+            }
+            .item{
+                text-align: center;
+                &__image{
+                    width: 80px;
+                    height: 80px;
+                    margin: 0 auto;
+                    @media screen and (max-width: 1280px) {
+                        width: 70px;
+                        height: 70px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &__heading{
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 24px 0 23px;
+                    @media screen and (max-width: 1280px) {
+                        margin: 20px 0 12px;
+                        font-size: 16px;
+                    }
+                }
+                &__description{
+                    color: rgba(29, 28, 49, 0.60);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px; 
+                    @media screen and (max-width: 1280px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .read-more{
+                margin-top: 33px;
+                font-size: 16px;
+                background-color: transparent;
+                align-self: flex-end;
+                border: none;
+                @media screen and (max-width: 1280px) {
+                    margin-top: 16px;
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 820px) {
+                    align-self: center;
+                }
+                
+            }
+        }
+    }
+ }
+}
+

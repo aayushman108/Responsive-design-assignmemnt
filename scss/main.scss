@@ -586,7 +586,6 @@ main{
                     gap: 14px;
                 }
                 p{
-                    border: 1px solid black;
                     color: rgba(255, 255, 255, 0.60);
                     width: 396px;
                     font-size: 16px;
@@ -601,25 +600,101 @@ main{
                 }
             }
         }
-        &__schedules{
+        &__schedules-top{
             @include d-flex(space-between, row);
             &--item{
-                border: 1px solid black;
+                border-radius: 8px;
+                border: 2px solid rgba(255, 255, 255, 0.10);
                 width: 328px;
                 height: 184px;
-                vertical-align: middle;
+                display: flex;
+                align-items: center;
                 .wrap{
                     max-width: fit-content;
                     margin: 0 auto;
-                    border: 1px solid red;
+                    @include d-flex(flex-start, column);
+                    gap: 24px;
+                    .item-link{
+                        &__image{
+                            width: 24px;
+                            height: 24px;
+                        }
+                        &__name{
+                            font-size: 18px;
+                            font-weight: 400;
+                            margin-left: 16px;
+                            color: white;
+                        }
+                    }
                 }
             }
             &--date{
-                width: 234px;
+                width: 328px;
                 height: 184px;
-                border: 2px solid black;
+                position: relative;
+                .date{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    width: 234px;
+                    padding: 16px 24px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: white;
+                    text-align: center;
+                    border-radius: 8px;
+                }
             }
         }
+        &__schedules-bottom{
+            @include d-flex(space-between, row);
+            &--item{
+                border-radius: 8px;
+                border: 2px solid rgba(255, 255, 255, 0.10);
+                width: 328px;
+                height: 184px;
+                display: flex;
+                align-items: center;
+                .wrap{
+                    max-width: fit-content;
+                    margin: 0 auto;
+                    @include d-flex(flex-start, column);
+                    gap: 24px;
+                    .item-link{
+                        &__image{
+                            width: 24px;
+                            height: 24px;
+                        }
+                        &__name{
+                            font-size: 18px;
+                            font-weight: 400;
+                            margin-left: 16px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            &--date{
+                width: 328px;
+                height: 184px;
+                position: relative;
+                .date{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 25%);
+                    width: 234px;
+                    padding: 16px 24px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: white;
+                    text-align: center;
+                    border-radius: 8px;
+                }
+            }
+        }
+        
     }
 }
 

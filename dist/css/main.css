@@ -731,6 +731,7 @@ main .review__container--item .reviewer__detail--stars .bi {
 .timeline-main {
   background-color: #5d55ff;
   padding: 75px 0;
+  margin-top: 150px;
 }
 @media screen and (max-width: 1280px) {
   .timeline-main {
@@ -797,9 +798,15 @@ main .review__container--item .reviewer__detail--stars .bi {
   justify-content: space-between;
 }
 .timeline-main .timeline__schedules--item {
+  border: 1px solid black;
   width: 328px;
   height: 184px;
-  border: 2px solid red;
+  vertical-align: middle;
+}
+.timeline-main .timeline__schedules--item .wrap {
+  max-width: fit-content;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 .timeline-main .timeline__schedules--date {
   width: 234px;

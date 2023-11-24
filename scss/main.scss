@@ -557,6 +557,7 @@ main{
 .timeline-main{
     background-color: $primary-color;
     padding: 75px 0;
+    margin-top: 150px;
     @media screen and (max-width: 1280px) {
         padding: 50px 0;
     }
@@ -603,9 +604,15 @@ main{
         &__schedules{
             @include d-flex(space-between, row);
             &--item{
+                border: 1px solid black;
                 width: 328px;
                 height: 184px;
-                border: 2px solid red;
+                vertical-align: middle;
+                .wrap{
+                    max-width: fit-content;
+                    margin: 0 auto;
+                    border: 1px solid red;
+                }
             }
             &--date{
                 width: 234px;
